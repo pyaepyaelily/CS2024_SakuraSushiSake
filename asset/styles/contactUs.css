@@ -1,0 +1,48 @@
+#contactUs_section {
+    padding-top: 30px;
+    height: 500px;
+    background-image: url(../img/contactUs_edit.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+#contactUs_div {
+    padding: 80px;
+    color: white;
+}
+
+/* ---------------------------------------------------------------------- Contact Us Form */
+#contactUs_form {
+    padding-top: 50px;
+}
+
+#submitBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+}
+
+#submitBtn button {
+    width: 20%;
+}
+
+/* ---------------------------------------------------------------------- Map */
+#gmp-map {
+    height: 500px;
+}
+
+
+/* ---------------------------------------------------------------------- Section to lead reservation */
+#contactUs_reserve {
+    background-color: #001725;
+    text-align: center;
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

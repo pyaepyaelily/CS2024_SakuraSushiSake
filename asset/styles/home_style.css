@@ -1,0 +1,97 @@
+/* ---------------------------------------------------------------------- Operating Hour  */
+#operatingHour_section {
+    background-color: #001725;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    border-style: solid;
+    border-color: gold;
+    padding: 90px 50px 90px 50px;
+}
+
+#operatingHour_table {
+    width: 500px;
+    margin: 0 auto;
+
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+#operatingHour_table td {
+    width: 250px;
+}
+
+#operatingHour_table .left {
+    text-align: left;
+}
+
+#operatingHour_table .right {
+    text-align: right;
+}
+
+#operatingHour_bg {
+    filter: brightness(50%) blur(5px);
+    -webkit-filter: brightness(50%) blur(5px);
+}
+
+/* ---------------------------------------------------------------------- Reservation  */
+#reservation_section {
+    padding-top: 30px;
+    height: 900px;
+    background-image: url(../img/sushi_sake2_bg1.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+#centerBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    /* border: 3px solid green;  */
+}
+
+.calendar-color-key {
+    background-color: #ccc;
+    color: black;
+    /* transition: background-color 0.3s, color 0.3s; */
+}
+
+.calendar-color-key.active {
+    background-color: #525252;
+    color: rgb(255, 255, 255);
+}
+
+#reserveNowBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+    /* border: 3px solid green; */
+}
+
+#reserveNowBtn button {
+    width: 100%;
+}
+
+/* #sushi_sake {
+    max-width: 100%;
+    max-height: 100%;
+} */
+
+#reserveDIV {
+    background-color: #fdfaff;
+    padding: 20px;
+    width: 60%;
+    border: 5px solid;
+    margin-top: 20px;
+    margin-left: 180px;
+    box-shadow: 5px 10px 18px #2b2a2a;
+}
