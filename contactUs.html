@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sakura Sushi & Sake</title>
+
+    <!-- Language control -->
+    <meta charset="utf-8">
+
+    <!-- Responsive control -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Google Script -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDarMyM9LIxpNXzL01uqCYVwn8eF0rwOEE&callback=initMap&libraries=&v=weekly"
+        defer></script>
+
+    <!-- Own StyleSheet -->
+    <link rel="stylesheet" type="text/css" href="asset/styles/contactUs.css">
+</head>
+
+<body>
+    <div>Navbar</div>
+
+    <div class="container-fluid" id="contactUs_section">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8">
+                <div id="contactUs_div">
+                    <h1 style="text-align:center">Contact Us</h1>
+                    <br>
+                    <h5 style="text-align:center">Sakura Sushi & Sake</h5>
+                    <h5 style="text-align:center">190 middle road fortune centre #03-01 Level 3, Singapore 188979</h5>
+                    <br>
+                    <p style="text-align:center">For urgent assistance and same day reservation, call us at +65 67574477
+                        between
+                        11:00AM - 10:00PM</p>
+                    <p style="text-align:center"> For non reservation enquiries, please leave us a message at or leave
+                        us a
+                        message at <br>
+                        <b style="color: gold;">enquiries@sakuraSushiSake.com</b>
+                    </p>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <!-- Contact Us Form -->
+    <h5 style="text-align:center; padding-top: 3%;">Or send us an email using the form below</h5>
+    <div class="container-fluid">
+        <div class="row" id="contactUs_form">
+
+            <div class="col"></div>
+            <div class="col-6">
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Name</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Phone Number</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Message</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    </div>
+
+                    <div class="form-group" id="submitBtn">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="col"></div>
+        </div>
+    </div>
+    <div style="padding-top: 50px;">
+        <div id="gmp-map"></div>
+    </div>
+    <div id="contactUs_reserve">
+        <h5 style="padding-bottom: 30px;">
+            Experience the exquisite fusion of sushi and sake at Hachi Restaurant, where each roll tells a story and our
+            private tatami rooms offer a tranquil escape.
+        </h5>
+        <button type="button" class="btn btn-outline-light">Online Reservation</button>
+
+    </div>
+
+    <div>Footer</div>
+</body>
+
+
+<script>
+    function initMap() {
+        const myLatLng = {
+            lat: 1.30060875415802,
+            lng: 103.85223388671875
+        };
+        const map = new google.maps.Map(document.getElementById("gmp-map"), {
+            zoom: 14,
+            center: myLatLng,
+            fullscreenControl: false,
+            zoomControl: true,
+            streetViewControl: false
+        });
+
+        // Create an InfoWindow with your shop information
+        const shopInfoWindow = new google.maps.InfoWindow({
+            content: `
+            <div>
+                <h3>Sakura Sushi & Sake</h3>
+                <br>
+                <p>Address: 190 middle road fortune centre #03-01 Level 3, Singapore 188979</p>
+                <p>Phone: +65 67574477</p>
+            </div>
+        `
+        });
+
+        let marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: "Sakura Sushi & Sake"
+        });
+
+        // Open the InfoWindow when the map loads
+        shopInfoWindow.open(map, marker);
+    }
+
+</script>
+
+</html>
