@@ -58,11 +58,12 @@
 
 
 /* ---------------------------------------------------------------------- Operating Hour  */
-#operatingHour_section {
-    background-color: #001725;
-}
+/* #operatingHour_section { */
+    /* background-color: #001725; */
+    /* background-color: black; */
+/* } */
 
-.centered {
+/* .centered {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -71,12 +72,50 @@
     border-style: solid;
     border-color: gold;
     padding: 90px 50px 90px 50px;
+    text-align: center;
+} */
+
+/* #operatingHour_table { */
+    /* width: 500px; */
+    /* margin: 0 auto;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+} */
+
+/* #operatingHour_table td {
+    width: 250px;
 }
 
-#operatingHour_table {
-    width: 500px;
-    margin: 0 auto;
+#operatingHour_table .left {
+    text-align: left;
+}
 
+#operatingHour_table .right {
+    text-align: right;
+} */
+
+
+/* #operatingHour_section {
+    background-color: #001725; */
+    /* background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+.centered {
+    position: relative;  */
+    /* color: white;
+    border-style: solid;
+    border-color: gold;
+    padding: 90px 20px 90px 20px;
+    text-align: center;
+    background-color: black;
+} */
+
+/* #operatingHour_table {
+    margin: 0 auto;
+    width: 500px;
     border-collapse: separate;
     border-spacing: 0 15px;
 }
@@ -91,12 +130,72 @@
 
 #operatingHour_table .right {
     text-align: right;
+} */
+
+#operatingHour_section {
+    background-color: #242223;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
 }
 
-#operatingHour_bg {
+.centered {
+    position: relative;
+    color: white;
+    border-style: solid;
+    border-color: gold;
+    padding: 50px 20px 50px 20px;
+    text-align: center;
+    background-color: #1c2424;
+}
+
+.logo-img {
+    display: block;
+    margin: 0 auto;
+    /* Add any additional styling for your logo image, e.g., width and height */
+    width: 200px;
+    height: auto;
+}
+
+#operatingHour_table {
+    margin: 0 auto;
+    width: 500px;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    position: relative; /* Make it relative to contain pseudo-elements */
+}
+
+#operatingHour_table td {
+    width: 250px;
+}
+
+#operatingHour_table .left {
+    text-align: left;
+}
+
+#operatingHour_table .right {
+    text-align: right;
+}
+
+#operatingHour_section .col {
+    position: relative; /* Add relative positioning to .col within #operatingHour_section */
+}
+
+#operatingHour_section .col::before {
+    content: '';
+    position: absolute;
+    bottom: 50%; /* Position at the middle of the .col within #operatingHour_section */
+    left: 0;
+    right: 0;
+    border-top: 2px solid white; /* Add a white horizontal line to .col within #operatingHour_section */
+}
+
+
+
+/* #operatingHour_bg {
     filter: brightness(50%) blur(5px);
     -webkit-filter: brightness(50%) blur(5px);
-}
+} */
 
 /* ---------------------------------------------------------------------- Reservation  */
 #reservation_section {
