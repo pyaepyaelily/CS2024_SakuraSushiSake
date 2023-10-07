@@ -161,7 +161,7 @@
     margin: 0 auto;
     width: 500px;
     border-collapse: separate;
-    border-spacing: 0 15px;
+    border-spacing: 0 20px;
     position: relative; /* Make it relative to contain pseudo-elements */
 }
 
@@ -187,7 +187,7 @@
     bottom: 50%; /* Position at the middle of the .col within #operatingHour_section */
     left: 0;
     right: 0;
-    border-top: 2px solid white; /* Add a white horizontal line to .col within #operatingHour_section */
+    border-top: 2px solid gold; /* Add a white horizontal line to .col within #operatingHour_section */
 }
 
 
