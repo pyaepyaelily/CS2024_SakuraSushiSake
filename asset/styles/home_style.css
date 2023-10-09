@@ -1,3 +1,20 @@
+/*-------------------------- Gallery Images --------------------------------------------*/
+.galleryContainer {
+    height: 800px;
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+}
+
+#carouselExampleControls {
+    width: 50%;
+    height: 60%;
+    margin: auto;
+}
+
+
+
+
 /* -------------------------- About Us ------------------------------------------------- */
 .about-us-container {
     width: 100%;
@@ -134,7 +151,7 @@
 
 #operatingHour_section {
     /* background-color: #242223; */
-    background-color: rgb(92, 20, 2);
+    background-color: rgb(0, 0, 0);
     background-size: cover;
     background-position: center;
     padding: 30px;
@@ -231,3 +248,15 @@
     /* margin-left: 100px; */
     /* box-shadow: 5px 10px 18px #2b2a2a; */
 }
+
+
+/* -------------------------- Footer ------------------------------------------------- */
+.footerContainer {
+    background-color: black;
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+

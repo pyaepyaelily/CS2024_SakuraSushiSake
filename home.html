@@ -31,7 +31,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: rgb(92, 20, 2)">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 0)">
         <div class="container-fluid">
             <a class="navbar-brand" href="home.html">
                 <img src="asset\img\logo.png" alt="Sakura Sushi & Sake" class="logo-img">
@@ -62,28 +63,32 @@
 
 
     <!-- Gallery Images for Signature Dishes -->
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="asset/img/sushi2.jpeg" alt="First slide" width="100%" height="1000px">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="asset/img/uni1.jpg" alt="Second slide" width="100%" height="800px">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="asset/img/sushi3.jpg" alt="Third slide" width="100%" height="800px">
+    <div class="galleryContainer" id="gallery">
+        <div id="galleryTitle" align="center">
+            <h1> Our Signature </h1>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="asset/img/sushi2.jpeg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="asset/img/uni1.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="asset/img/sushi3.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
     </div>
-
 
 
     <!-- About Us -->
@@ -206,11 +211,38 @@
     </div>
 
 
-
-
-
-    <div>
-        footer
+    <!-- Footer -->
+    <div class="footerContainer" id="footer">
+        <table cellpadding="0" cellspacing="0" border="0" id="footerTable" width="100%">
+            <tr>
+                <td width="20%" align="left">
+                    <a href="home.html"><img src="asset/img/logo.png" align="left" title="logofooter" width="120px" height="100px"></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reserve.html">Reservation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactUs.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </td>
+                <td width="30%">
+                    <h5> Address </h5>
+                    <p> 190 Middle Road Fortune Centre #03-01 Level 3, Singapore 188979 </p>
+                </td>
+                <td width="15%">
+                    <h5> Contact Us </h5>
+                    <p> +65 6757 4777 </p>
+                </td>
+                <td width="20%" align="left">
+                    <h5> Find Us </h5>
+                    <img src="asset/img/instagram.png" title="instagramfooter" width="20px" height="20px">
+                    <img src="asset/img/facebook.png" title="facebookfooter" width="15px" height="20px">
+            </tr>
+        </table>
     </div>
 
     <script>

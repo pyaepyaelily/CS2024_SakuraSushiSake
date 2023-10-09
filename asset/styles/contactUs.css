@@ -46,3 +46,13 @@
     justify-content: center;
     align-items: center;
 }
+
+/* -------------------------- Footer ------------------------------------------------- */
+.footerContainer {
+    background-color: black;
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
