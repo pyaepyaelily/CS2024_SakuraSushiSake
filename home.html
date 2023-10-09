@@ -32,21 +32,42 @@
 
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 0)">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="home.html">
-                <img src="asset\img\logo.png" alt="Sakura Sushi & Sake" class="logo-img">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <div class="text-center">
-                    <ul class="navbar-nav">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <title>Navbar with Right-Aligned Links</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 0)">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center"> <!-- Create a flex container for logo and text -->
+                    <a class="navbar-brand" href="home.html">
+                        <img src="asset\img\logo.png" alt="Sakura Sushi & Sake" class="logo-img">
+                    </a>
+                    <a href="home.html" style="text-decoration: none;">
+                        <span class="text-white" style="font-size: 20px;">Sakura Sushi & Sake</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Menu</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="reserve.html">Reservation</a>
@@ -57,10 +78,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </nav>
-
-
+        </nav>
 
     <!-- Gallery Images for Signature Dishes -->
     <div class="galleryContainer" id="gallery">
@@ -154,7 +172,7 @@
                 <div class="position-relative">
                     <!-- <img id="operatingHour_bg" src="asset/img/operating_hour_bg.jpg" alt="Your Image" class="img-fluid"> -->
                     <div class="centered">
-                        <img src="asset\img\logo.png" alt="Your Logo" class="logo-img">
+                        <img src="asset\img\logo.png" alt="Sakura Sushi & Sake Logo" class="logo-img">
                         <h1 style="text-align:center">Operating Hours</h1>
                         <table id="operatingHour_table">
                             <tr>
@@ -202,8 +220,10 @@
                     <br>
                     <h4 style="text-align:center">Reserve a Table for an Unforgettable Culinary Experience.</h4>
                     <br>
-                    <button type="button" class="btn btn-outline-light btn-lg" id="reserveNowBtn">Online
-                        Reservation</button>
+                    <a href="reserve.html" style="text-decoration: none;">
+                        <button type="button" class="btn btn-outline-light btn-lg" id="reserveNowBtn">Online
+                            Reservation</button>
+                    </a>
 
                 </div>
             </div>
@@ -216,7 +236,8 @@
         <table cellpadding="0" cellspacing="0" border="0" id="footerTable" width="100%">
             <tr>
                 <td width="20%" align="left">
-                    <a href="home.html"><img src="asset/img/logo.png" align="left" title="logofooter" width="120px" height="100px"></a>
+                    <a href="home.html"><img src="asset/img/logo.png" align="left" title="logofooter" width="120px"
+                            height="100px"></a>
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link" href="home.html">Home</a>
