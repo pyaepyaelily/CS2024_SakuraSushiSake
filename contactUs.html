@@ -113,7 +113,7 @@
 
             <div class="col"></div>
             <div class="col-6">
-                <form method="get" action="">
+                <form method="get" action="" id="contactForm">
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
@@ -145,7 +145,31 @@
                     </div>
 
                 </form>
+
+<!-- The Modal -->
+<!-- The Modal -->
+<div class="modal" id="thankYouModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal header with a close button (cross button) -->
+            <div class="modal-header">
+                <h5 class="modal-title">Thank You</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                Thank you for sending!
+            </div>
+            <!-- Modal footer with a close button -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+
+
 
             <div class="col"></div>
         </div>
@@ -160,12 +184,12 @@
             story and our
             private tatami rooms offer a tranquil escape.
         </h5>
-        
-            <a href="reserve.html" class="btn btn-outline-light btn-lg" style="font-size: 20px">
-                <i>Online
-                    Reservation</i>
-            </a>
-   
+
+        <a href="reserve.html" class="btn btn-outline-light btn-lg" style="font-size: 20px">
+            <i>Online
+                Reservation</i>
+        </a>
+
     </div>
 
 
@@ -251,5 +275,32 @@
     }
 
 </script>
+
+
+<script>
+    const form = document.getElementById('contactForm');
+    const modal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+
+    // Function to clear the form inputs
+    function clearFormInputs() {
+        form.reset();
+    }
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the form submission
+
+        // You can perform any form validation or submission here.
+
+        // Show the thank you modal
+        modal.show();
+    });
+
+    // Listen for the modal close event and clear the form when it's closed
+    modal._element.addEventListener('hidden.bs.modal', clearFormInputs);
+</script>
+
+
+
+
 
 </html>
