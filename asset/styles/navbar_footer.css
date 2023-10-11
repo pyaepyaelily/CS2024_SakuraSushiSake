@@ -15,6 +15,11 @@
     align-items: center; /* Vertically align text within the button */
 }
 
+/* Add this CSS to change the background color on hover */
+.navbar-nav .nav-link:hover {
+    color: gold; /* Change the text color on hover */
+}
+
 
 /* Add this to your CSS for button styling */
 #navreserveNowBtn {
@@ -27,7 +32,10 @@
     align-items: center; /* Vertically align text within the button */
 }
 
-
+/* -------------------------- Body ------------------------------------------------- */
+body{
+    font-family: "Tahoma";
+}
 
 /* -------------------------- Footer ------------------------------------------------- */
 .footerContainer {
