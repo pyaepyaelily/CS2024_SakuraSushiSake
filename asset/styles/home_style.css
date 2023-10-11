@@ -51,8 +51,7 @@
 }
 
 /* ---------------------------------------------------------------------- Operating Hour  */
-#operatingHour_section {
-    /* background-color: #242223; */
+/* #operatingHour_section {
     background-color: rgb(0, 0, 0);
     background-size: cover;
     background-position: center;
@@ -96,19 +95,88 @@
 #operatingHour_table .right {
     text-align: right;
 }
-
+*/
 #operatingHour_section .col {
-    position: relative; /* Add relative positioning to .col within #operatingHour_section */
+    position: relative;
 }
 
 #operatingHour_section .col::before {
     content: '';
     position: absolute;
-    bottom: 50%; /* Position at the middle of the .col within #operatingHour_section */
+    bottom: 50%; 
     left: 0;
     right: 0;
-    border-top: 2px solid gold; /* Add a white horizontal line to .col within #operatingHour_section */
+    border-top: 2px solid gold; 
+} 
+
+
+
+#operatingHour_section {
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    font-family: "Tahoma";
 }
+
+.centered {
+    color: white;
+    border-style: solid;
+    border-color: gold;
+    padding: 50px 20px 50px 20px;
+    text-align: center;
+    background-color: #1c2424;
+}
+
+.logo-img {
+    display: block;
+    margin: 0 auto; /* Center the logo horizontally */
+    width: 200px;
+    height: auto;
+}
+
+#operatingHour_table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+#operatingHour_table td {
+    width: 50%; /* Adjust the width as needed */
+}
+
+#operatingHour_table .left {
+    text-align: left;
+}
+
+#operatingHour_table .right {
+    text-align: right;
+}
+
+/* Define the background color for the custom table */
+.custom-table {
+    background-color: #1c2424 !important;
+    color: white !important; /* Set text color to white */
+    border: none !important; /* Remove any borders */
+}
+
+/* Style the table rows and cells */
+.custom-table tr {
+    background-color: transparent !important;
+}
+
+.custom-table td {
+    background-color: transparent !important;
+    border: none !important; /* Remove any borders on table cells */
+}
+
+/* Force text color to white */
+.custom-table * {
+    color: white !important;
+}
+
+
+
 
 /* ---------------------------------------------------------------------- Reservation  */
 #reservation_section {
