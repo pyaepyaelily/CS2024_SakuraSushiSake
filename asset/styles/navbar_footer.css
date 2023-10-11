@@ -6,4 +6,17 @@
 
 .navbar-nav .nav-link {
     color: white;
+    font-family: "Tahoma";
+}
+
+/* -------------------------- Footer ------------------------------------------------- */
+.footerContainer {
+    background-color: black;
+    color: white;
+    padding: 30px 30px 30px 30px;
+    font-family: "Tahoma";
+}
+
+.nav-link {
+    color: white;
 }

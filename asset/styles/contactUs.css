@@ -4,6 +4,7 @@
     background-image: url(../img/contactUs_edit.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    font-family: "Tahoma";
 
 }
 
@@ -15,6 +16,7 @@
 /* ---------------------------------------------------------------------- Contact Us Form */
 #contactUs_form {
     padding-top: 50px;
+    font-family: "Tahoma";
 }
 
 #submitBtn {
@@ -27,6 +29,7 @@
 
 #submitBtn button {
     width: 20%;
+    font-family: "Tahoma";
 }
 
 /* ---------------------------------------------------------------------- Map */
@@ -45,14 +48,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Tahoma";
 }
 
-/* -------------------------- Footer ------------------------------------------------- */
-.footerContainer {
-    background-color: black;
-    color: white;
-}
-
-.nav-link {
-    color: white;
-}

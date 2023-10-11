@@ -18,9 +18,10 @@
 /* -------------------------- About Us ------------------------------------------------- */
 .about-us-container {
     width: 100%;
-    height: 800px;
+    height: 1400px;
     background-color: black;
     color: white;
+    font-family: "Tahoma";
 }
 
 #aboutUsTitle {
@@ -29,11 +30,12 @@
 
 #aboutUsTable {
     width: 80%;
-    height: 80%;
+    height:100%;
     margin: auto;
 }
 
 
+/* -------------------------- Menu Section --------------------------------------- */
 .main-container {
     width : 100%;
     height : 800px;
@@ -45,6 +47,8 @@
     overflow:scroll; 
     overflow-x:hidden;
     overflow-y:hidden;
+    font-family: "Tahoma";
+    font-size: 18px;
 }
 
 #aboutUsTextTop {
@@ -57,7 +61,6 @@
     color: white;
 }
 
-
 /* ---------------------------------------------------------------------- Operating Hour  */
 #operatingHour_section {
     /* background-color: #242223; */
@@ -65,6 +68,7 @@
     background-size: cover;
     background-position: center;
     padding: 30px;
+    font-family: "Tahoma";
 }
 
 .centered {
@@ -124,6 +128,7 @@
     background-image: url(../img/sushi_sake2_bg1.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    font-family: "Tahoma";
 }
 
 #reserveNowBtn {
@@ -152,13 +157,4 @@
 }
 
 
-/* -------------------------- Footer ------------------------------------------------- */
-.footerContainer {
-    background-color: black;
-    color: white;
-}
-
-.nav-link {
-    color: white;
-}
 
