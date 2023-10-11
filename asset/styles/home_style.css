@@ -1,19 +1,8 @@
 /*-------------------------- Gallery Images --------------------------------------------*/
-.galleryContainer {
-    height: 800px;
-    background-color: black;
-    color: white;
-    padding-top: 20px;
+#photoCarousel .carousel-item img {
+    max-height: 650px; 
+    max-width: 100%; 
 }
-
-#carouselExampleControls {
-    width: 50%;
-    height: 60%;
-    margin: auto;
-}
-
-
-
 
 /* -------------------------- About Us ------------------------------------------------- */
 .about-us-container {
