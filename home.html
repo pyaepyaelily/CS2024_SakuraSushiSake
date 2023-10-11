@@ -30,55 +30,52 @@
     <link rel="stylesheet" type="text/css" href="asset/styles/navbar_footer.css">
 </head>
 
+
 <body>
-    <!-- Navigation Bar -->
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-        <title>Navbar with Right-Aligned Links</title>
-    </head>
-
-    <body>
-        <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 0)">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center"> <!-- Create a flex container for logo and text -->
-                    <a class="navbar-brand" href="home.html">
-                        <img src="asset\img\logo.png" alt="Sakura Sushi & Sake" class="logo-img">
-                    </a>
-                    <a href="home.html" style="text-decoration: none;">
-                        <span class="text-white" style="font-size: 25px; font-family: Didot"><strong>Sakura Sushi & Sake</strong></span>
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="home.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="reserve.html">Reservation</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contactUs.html">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 0)">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="home.html">
+                    <img src="asset\img\logo.png" alt="Sakura Sushi & Sake" class="nav-logo-img">
+                </a>
+                <a href="home.html" style="text-decoration: none;">
+                    <span class="text-white" style="font-size: 25px; font-family: Didot"><strong>Sakura Sushi & Sake</strong></span>
+                </a>
             </div>
-        </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reserve.html">Reservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactUs.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Create a div for the button -->
+            <div class="reserve-button">
+                <a href="reserve.html" class="btn btn-outline-light btn-lg" id="navreserveNowBtn">
+                    <i>Reserve Now</i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+
 
     <!-- Gallery Images for Signature Dishes -->
     <div class="galleryContainer" id="gallery">
@@ -115,13 +112,14 @@
             <table cellpadding="5" cellspacing="0" border="0" id="aboutUsTable">
                 <tr>
                     <td width="50%" align="center">
-                        <h1 style="font-family:Didot"><strong> <i>  About Us </i></strong></h1>
+                        <h1 style="font-family:Didot"><strong> <i> About Us </i></strong></h1>
                         <br />
                         <p> Founded in 2010, Sakura Sushi & Sake serves a fusion of modern and traditional Japanese
                             Food. We focus on delivering excellent quality food and drinks to our customers in a
                             comfortable but elevated dining experience. </p>
                         <br />
-                        <button type="button" class="btn btn-outline-light btn-lg" id="readMoreBtn"><i>Read More</i></button>
+                        <button type="button" class="btn btn-outline-light btn-lg" id="readMoreBtn"><i>Read
+                                More</i></button>
                     </td>
                     <td>
                         <img src="asset/img/seating1.png" align="right" title="seating1" width="100%" height="100%">
@@ -134,10 +132,14 @@
                     <td width="80%" align="center">
                         <h1 style="font-family:Didot"><strong><i> The Founder </i></strong></h1>
                         <br />
-                        <p> Sakura Sushi & Sake is founded by Chef Akira Haru in 2006. Born in Kanazawa, Chef Haru has always been fascinated by the art and history of sushi making. This has lead to his dream of opening a fusion Japanese restuarant. </p>
-                        <p> Drawing inspiration from both the modern and traditional Japanese culture, Sakura Sushi & Sake is a stage for him to showcase his passion and authentic creation. </p>
+                        <p> Sakura Sushi & Sake is founded by Chef Akira Haru in 2006. Born in Kanazawa, Chef Haru has
+                            always been fascinated by the art and history of sushi making. This has lead to his dream of
+                            opening a fusion Japanese restuarant. </p>
+                        <p> Drawing inspiration from both the modern and traditional Japanese culture, Sakura Sushi &
+                            Sake is a stage for him to showcase his passion and authentic creation. </p>
                         <br />
-                        <button type="button" class="btn btn-outline-light btn-lg" id="readMoreBtn"><i>Read More</i></button>
+                        <button type="button" class="btn btn-outline-light btn-lg" id="readMoreBtn"><i>Read
+                                More</i></button>
                     </td>
                 </tr>
             </table>
@@ -154,7 +156,7 @@
             <tr>
                 <td align="center" width="50%">
                     <h2 style="font-family:Didot"> Lunch </h2>
-                    <br /> 
+                    <br />
                     <h4> Sushi Edomae </h4>
                     <p> Sashimi (3 kinds), Nigiri Sushi (15 pieces), Temaki & Dessert </p>
                     <p><i> SGD 178 </i></p>
@@ -242,8 +244,9 @@
                     <h4 style="text-align:center">Reserve a Table for an Unforgettable Culinary Experience.</h4>
                     <br>
                     <a href="reserve.html" style="text-decoration: none;">
-                        <button type="button" class="btn btn-outline-light btn-lg" id="reserveNowBtn" style="font-family: Tahoma"><i>Online
-                            Reservation</i></button>
+                        <button type="button" class="btn btn-outline-light btn-lg" id="reserveNowBtn"
+                            style="font-family: Tahoma"><i>Online
+                                Reservation</i></button>
                     </a>
 
                 </div>
