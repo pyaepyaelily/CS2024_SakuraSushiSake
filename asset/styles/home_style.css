@@ -1,4 +1,12 @@
 /*-------------------------- Gallery Images --------------------------------------------*/
+.signatureTitle {
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin: 0;
+}
+
 #photoCarousel .carousel-item img {
     max-height: 650px; 
     max-width: 100%; 
@@ -28,7 +36,7 @@
 .main-container {
     width : 100%;
     height : 800px;
-    background-image: url("../img/otoro1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/sushi4.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

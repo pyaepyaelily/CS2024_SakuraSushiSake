@@ -31,7 +31,7 @@
     <!-- JavaScript for Successful Reservation -->
     <script>
         function success() {
-            alert("Successful Reservation! \n\nA confirmation of your reservation will be sent to your email shortly. Please arrive 15 minutes before your reserved time. Thank you and see you soon!");
+            alert("Reservation Successful! \n\nA confirmation of your reservation will be sent to your email shortly. Please arrive 15 minutes before your reserved time. Thank you and see you soon!");
         }
     </script>
 </head>
@@ -73,7 +73,7 @@
             </div>
             <!-- Create a div for the button -->
             <div class="reserve-button">
-                <a href="reserve.html" class="btn btn-outline-light btn-lg" id="navreserveNowBtn">
+                <a href="reserve.html" class="btn btn-outline-light btn-lg" id="navreserveNowBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <i>Reserve Now</i>
                 </a>
             </div>
@@ -220,7 +220,7 @@
                                 <ul>
                                     <li>Please arrive <strong>15 minutes</strong> before your reservation.</li>
                                     <li>For group size larger than 20 guests, kindly call us at +65 6757 4477 to make your reservation.</li>
-                                    <li>For same-day reservation, please call us at +65 6757 4477</li>
+                                    <li>For same-day reservation, please call us at +65 6757 4477.</li>
                                     <li>The restaurant will allocate you to another seating arrangement if your preferred selection is not available.</li>
                                     <li> For cancellation of reservation, please call us at +65 6757 4477.</li>
                                 </ul>
@@ -271,15 +271,15 @@
                         </li>
                     </ul>
                 </td>
-                <td width="30%">
+                <td width="20%" valign="middle">
                     <h5><strong> Address </strong></h5>
                     <p> 190 Middle Road Fortune Centre #03-01 Level 3, Singapore 188979 </p>
                 </td>
-                <td width="15%">
+                <td width="20%" align="center" valign="middle">
                     <h5><strong> Contact Us </strong></h5>
                     <p> +65 6757 4777 </p>
                 </td>
-                <td width="20%" align="left">
+                <td width="20%" align="left" valign="middle">
                     <h5><strong> Find Us </strong></h5>
                     <img src="asset/img/instagram.png" title="instagramfooter" width="20px" height="20px">
                     <img src="asset/img/facebook.png" title="facebookfooter" width="15px" height="20px" hspace="5px">

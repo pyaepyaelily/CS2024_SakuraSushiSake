@@ -28,6 +28,13 @@
 
     <link rel="stylesheet" type="text/css" href="asset/styles/home_style.css">
     <link rel="stylesheet" type="text/css" href="asset/styles/navbar_footer.css">
+
+    <!-- JavaScript for Successful Reservation -->
+    <script>
+        function success() {
+            alert("Reservation Successful! \n\nA confirmation of your reservation will be sent to your email shortly. Please arrive 15 minutes before your reserved time. Thank you and see you soon!");
+        }
+    </script>
 </head>
 
 
@@ -69,73 +76,133 @@
             </div>
             <!-- Create a div for the button -->
             <div class="reserve-button">
-                <a href="reserve.html" class="btn btn-outline-light btn-lg" id="navreserveNowBtn">
+                <a href="reserve.html" class="btn btn-outline-light btn-lg" id="navreserveNowBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <i>Reserve Now</i>
                 </a>
             </div>
         </div>
     </nav>
 
+    <!-- Reservation Page Pop Up Form -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel" style="font-family: Didot;"><strong><i>Reservation</i></strong></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form Inputs-->
+                    <form name="reserveForm" method="post" action="">
+                        <input type="text" class="form-control" name="name" placeholder="Full Name" required> <br />
+                        <input type="email" class="form-control" name="email" placeholder="Email" required> <br />
+                        <input type="text" class="form-control" name="phone" placeholder="Phone Number" required> <br />
+                        <select name="pax" required>
+                            <option value="">No. of Pax</option>
+                            <option value="1-2">1-2</option>
+                            <option value="3-4">3-4</option>
+                            <option value="5-6">5-6</option>
+                            <option value="7-8">7-8</option>
+                            <option value="9-10">9-10</option>
+                            <option value="11-15">11-15</option>
+                            <option value="16-20">16-20</option>
+                        </select> 
+                        <br /><br />
+                        <select name="room" required>
+                            <option value="">Type of Room</option>
+                            <option value="private">Tatami Private Room</option>
+                            <option value="semiPrivate">Semi-Private Room</option>
+                            <option value="counter">Chef's Counter</option>
+                            <option value="mainDining">Main Dining Table</option>
+                        </select>
+                        <br /><br />
+                        <input type="date" name="date" placeholder="date" required> 
+                        <br /><br />
+                        <select name="time" required>
+                            <option value="">Time</option>
+                            <option value="11am">11 AM</option>
+                            <option value="11.30am">11.30 AM</option>
+                            <option value="12pm">12 PM</option>
+                            <option value="12.30pm">12.30 PM</option>
+                            <option value="1pm">1 PM</option>
+                            <option value="1.30pm">1.30 PM</option>
+                            <option value="2pm">2 PM</option>
+                            <option value="2.30pm">2.30 PM</option>
+                            <option value="3pm">3 PM</option>
+                            <option value="3.30pm">3.30 PM</option>
+                            <option value="4pm">4 PM</option>
+                            <option value="4.30pm">4.30 PM</option>
+                            <option value="5pm">5 PM</option>
+                            <option value="5.30pm">5.30 PM</option>
+                            <option value="6pm">6 PM</option>
+                            <option value="6.30pm">6.30 PM</option>
+                            <option value="7pm">7 PM</option>
+                            <option value="7.30pm">7.30 PM</option>
+                            <option value="8pm">8 PM</option>
+                            <option value="8.30pm">8.30 PM</option>
+                            <option value="9pm">9 PM</option>
+                        </select>
+                        <br /><br />
+                        <textarea name="comment" cols="30" row="5" placeholder="Comment"></textarea>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" onclick="success();">Reserve</button>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+         </div>
+    </div>
+
 
 
     <!-- Gallery Images for Signature Dishes -->
-    <!-- <div class="galleryContainer" id="gallery">
-        <div id="galleryTitle" align="center">
-            <h1 style="font-family:Didot; font-size: 45px"> <strong> <i> Our Signature </i></strong></h1>
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="asset/img/sushi2.jpeg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="asset/img/uni1.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="asset/img/sushi3.jpg" alt="Third slide">
-                    </div>
+    <div class="signatureTitle" id="signatureTitle"> 
+        <h1 style="font-family:Didot; font-size: 45px"> <strong> <i> Our Signature </i></strong></h1>
+        <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="asset\img\omakase6.jpg" class="d-block w-100" alt="Image 1">
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </div> -->
+        
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="asset\img\omakase17.jpg" class="d-block w-100" alt="Image 2">
+                </div>
+        
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="asset\img\omakase28.jpg" class="d-block w-100" alt="Image 3">
+                </div>
 
+                <!-- Slide 4 -->
+                 <div class="carousel-item">
+                    <img src="asset\img\omakase21.jpg" class="d-block w-100" alt="Image 3">
+                </div>
 
-    <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
-        <!-- Slides -->
-        <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <img src="asset\img\sushi_new2.jpg" class="d-block w-100" alt="Image 1">
+                <!-- Slide 5 -->
+                 <div class="carousel-item">
+                    <img src="asset\img\omakase23.jpg" class="d-block w-100" alt="Image 3">
+                </div>
+
+                <!-- Slide 6 -->
+                 <div class="carousel-item">
+                    <img src="asset\img\sake2.png" class="d-block w-100" alt="Image 3">
+                </div>
+                <!-- Add more slides as needed for your photos -->
             </div>
-    
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <img src="asset\img\sushi_new3.jpg" class="d-block w-100" alt="Image 2">
-            </div>
-    
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-                <img src="asset\img\sushi_new4.jpg" class="d-block w-100" alt="Image 3">
-            </div>
-            <!-- Add more slides as needed for your photos -->
+        
+            <!-- Controls (Previous and Next) -->
+            <a class="carousel-control-prev" href="#photoCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#photoCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
         </div>
-    
-        <!-- Controls (Previous and Next) -->
-        <a class="carousel-control-prev" href="#photoCarousel" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#photoCarousel" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </a>
     </div>
     
     
@@ -151,8 +218,7 @@
                         <h1 style="font-family:Didot"><strong> <i> About Us </i></strong></h1>
                         <br />
                         <p> Founded in 2010, Sakura Sushi & Sake serves a fusion of modern and traditional Japanese
-                            Food. We focus on delivering excellent quality food and drinks to our customers in a
-                            comfortable but elevated dining experience. </p>
+                            Cuisine. We prioritise excellent quality of food and service, while creating a comfortable yet elevated dining experience.</p>
                         <br />
                         <button type="button" class="btn btn-outline-light btn-lg" id="readMoreBtn"><i>Read
                                 More</i></button>
@@ -170,7 +236,7 @@
                         <br />
                         <p> Sakura Sushi & Sake is founded by Chef Akira Haru in 2006. Born in Kanazawa, Chef Haru has
                             always been fascinated by the art and history of sushi making. This has lead to his dream of
-                            opening a fusion Japanese restuarant. </p>
+                            owning a Japanese restuarant. </p>
                         <p> Drawing inspiration from both the modern and traditional Japanese culture, Sakura Sushi &
                             Sake is a stage for him to showcase his passion and authentic creation. </p>
                         <br />
@@ -323,15 +389,14 @@
             <div class="col"></div>
             <div class="col">
                 <div id="reserveDIV">
-                    <h3 style="text-align:center">Discover the Art of Sake and Sushi at Our Omakase <br>
-                        Savor the Flavors, Sip the Elegance, and Secure Your Spot!</h3>
+                    <h3 style="text-align:center">Discover the Art of Sushi and Sake at Our Omakase <br>
+                        Savor the Flavours, Sip the Elegance, and Secure Your Spot!</h3>
                     <br>
-                    <h4 style="text-align:center">Reserve a Table for an Unforgettable Culinary Experience.</h4>
+                    <h4 style="text-align:center">Reserve a Table for an Unforgettable Dining Experience.</h4>
                     <br>
                     <a href="reserve.html" style="text-decoration: none;">
                         <button type="button" class="btn btn-outline-light btn-lg" id="reserveNowBtn"
-                            style="font-family: Tahoma"><i>Online
-                                Reservation</i></button>
+                            style="font-family: Tahoma"><i>Reserve Now</i></button>
                     </a>
 
                 </div>
@@ -365,15 +430,15 @@
                         </li>
                     </ul>
                 </td>
-                <td width="30%">
+                <td width="20%" valign="middle">
                     <h5><strong> Address </strong></h5>
                     <p> 190 Middle Road Fortune Centre #03-01 Level 3, Singapore 188979 </p>
                 </td>
-                <td width="15%">
+                <td width="20%" align="center" valign="middle">
                     <h5><strong> Contact Us </strong></h5>
                     <p> +65 6757 4777 </p>
                 </td>
-                <td width="20%" align="left">
+                <td width="20%" align="left" valign="middle">
                     <h5><strong> Find Us </strong></h5>
                     <img src="asset/img/instagram.png" title="instagramfooter" width="20px" height="20px">
                     <img src="asset/img/facebook.png" title="facebookfooter" width="15px" height="20px" hspace="5px">

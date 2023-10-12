@@ -33,6 +33,13 @@
     <!-- Own StyleSheet -->
     <link rel="stylesheet" type="text/css" href="asset/styles/contactUs.css">
     <link rel="stylesheet" type="text/css" href="asset/styles/navbar_footer.css">
+
+    <!-- JavaScript for Successful Reservation -->
+    <script>
+        function success() {
+            alert("Reservation Successful! \n\nA confirmation of your reservation will be sent to your email shortly. Please arrive 15 minutes before your reserved time. Thank you and see you soon!");
+        }
+    </script>
 </head>
 
 <body>
@@ -73,12 +80,82 @@
             </div>
             <!-- Create a div for the button -->
             <div class="reserve-button">
-                <a href="reserve.html" class="btn btn-outline-light btn-lg" id="navreserveNowBtn">
+                <a href="reserve.html" class="btn btn-outline-light btn-lg" id="navreserveNowBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <i>Reserve Now</i>
                 </a>
             </div>
         </div>
     </nav>
+
+    <!-- Reservation Page Pop Up Form -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel" style="font-family: Didot;"><strong><i>Reservation</i></strong></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form Inputs-->
+                    <form name="reserveForm" method="post" action="">
+                        <input type="text" class="form-control" name="name" placeholder="Full Name" required> <br />
+                        <input type="email" class="form-control" name="email" placeholder="Email" required> <br />
+                        <input type="text" class="form-control" name="phone" placeholder="Phone Number" required> <br />
+                        <select name="pax" required>
+                            <option value="">No. of Pax</option>
+                            <option value="1-2">1-2</option>
+                            <option value="3-4">3-4</option>
+                            <option value="5-6">5-6</option>
+                            <option value="7-8">7-8</option>
+                            <option value="9-10">9-10</option>
+                            <option value="11-15">11-15</option>
+                            <option value="16-20">16-20</option>
+                        </select> 
+                        <br /><br />
+                        <select name="room" required>
+                            <option value="">Type of Room</option>
+                            <option value="private">Tatami Private Room</option>
+                            <option value="semiPrivate">Semi-Private Room</option>
+                            <option value="counter">Chef's Counter</option>
+                            <option value="mainDining">Main Dining Table</option>
+                        </select>
+                        <br /><br />
+                        <input type="date" name="date" placeholder="date" required> 
+                        <br /><br />
+                        <select name="time" required>
+                            <option value="">Time</option>
+                            <option value="11am">11 AM</option>
+                            <option value="11.30am">11.30 AM</option>
+                            <option value="12pm">12 PM</option>
+                            <option value="12.30pm">12.30 PM</option>
+                            <option value="1pm">1 PM</option>
+                            <option value="1.30pm">1.30 PM</option>
+                            <option value="2pm">2 PM</option>
+                            <option value="2.30pm">2.30 PM</option>
+                            <option value="3pm">3 PM</option>
+                            <option value="3.30pm">3.30 PM</option>
+                            <option value="4pm">4 PM</option>
+                            <option value="4.30pm">4.30 PM</option>
+                            <option value="5pm">5 PM</option>
+                            <option value="5.30pm">5.30 PM</option>
+                            <option value="6pm">6 PM</option>
+                            <option value="6.30pm">6.30 PM</option>
+                            <option value="7pm">7 PM</option>
+                            <option value="7.30pm">7.30 PM</option>
+                            <option value="8pm">8 PM</option>
+                            <option value="8.30pm">8.30 PM</option>
+                            <option value="9pm">9 PM</option>
+                        </select>
+                        <br /><br />
+                        <textarea name="comment" cols="30" row="5" placeholder="Comment"></textarea>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" onclick="success();">Reserve</button>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+         </div>
+    </div>
 
 
     <div class="container-fluid" id="contactUs_section">
@@ -89,15 +166,13 @@
                     <h1 style="text-align:center; font-family: Didot; font-size: 60px"><strong><i>Contact
                                 Us</i></strong></h1>
                     <br>
-                    <h3 style="text-align:center">Sakura Sushi & Sake</h3>
-                    <h5 style="text-align:center">190 middle road fortune centre #03-01 Level 3, Singapore 188979</h5>
+                    <h3 style="text-align:center; font-family: Didot;">Sakura Sushi & Sake</h3>
+                    <h5 style="text-align:center">190 Middle Road Fortune Centre #03-01 Level 3, Singapore 188979</h5>
                     <br>
-                    <p style="text-align:center">For urgent assistance and same day reservation, call us at +65 67574477
+                    <p style="text-align:center">For urgent assistance and same day reservation, call us at +65 6757 4477
                         between
                         11:00AM - 10:00PM</p>
-                    <p style="text-align:center"> For non reservation enquiries, please leave us a message at or leave
-                        us a
-                        message at <br>
+                    <p style="text-align:center"> For non reservation enquiries, please send us an email at <br>
                         <b style="color: gold;">enquiries@sakuraSushiSake.com</b>
                     </p>
                 </div>
@@ -107,7 +182,7 @@
     </div>
 
     <!-- Contact Us Form -->
-    <h5 style="text-align:center; padding-top: 3%;">Or send us an email using the form below</h5>
+    <h5 style="text-align:center; padding-top: 3%;">Or leave us a message using the form below</h5>
     <div class="container-fluid">
         <div class="row" id="contactUs_form">
 
@@ -141,7 +216,7 @@
                     </div>
 
                     <div class="form-group" id="submitBtn">
-                        <button type="submit" class="btn btn-dark" style="font-size: 20px;"><i>Send Message</i></button>
+                        <button type="submit" class="btn btn-dark" style="font-size: 17px;"><i>Send Message</i></button>
                     </div>
 
                 </form>
@@ -186,8 +261,7 @@
         </h5>
 
         <a href="reserve.html" class="btn btn-outline-light btn-lg" style="font-size: 20px">
-            <i>Online
-                Reservation</i>
+            <i>Reserve Now</i>
         </a>
 
     </div>
@@ -219,15 +293,15 @@
                         </li>
                     </ul>
                 </td>
-                <td width="30%">
+                <td width="20%" valign="middle">
                     <h5><strong> Address </strong></h5>
                     <p> 190 Middle Road Fortune Centre #03-01 Level 3, Singapore 188979 </p>
                 </td>
-                <td width="15%">
+                <td width="20%" align="center" valign="middle">
                     <h5><strong> Contact Us </strong></h5>
                     <p> +65 6757 4777 </p>
                 </td>
-                <td width="20%" align="left">
+                <td width="20%" align="left" valign="middle">
                     <h5><strong> Find Us </strong></h5>
                     <img src="asset/img/instagram.png" title="instagramfooter" width="20px" height="20px">
                     <img src="asset/img/facebook.png" title="facebookfooter" width="15px" height="20px" hspace="5px">
